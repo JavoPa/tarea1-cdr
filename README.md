@@ -1,3 +1,11 @@
+## Instalación de compilador
+
+`$ sudo apt update && sudo apt install build-essential`
+
+o
+
+`sudo apt-get install g++`
+
 ## Compilación y Ejecución Servidor
 
 `make servidor`
