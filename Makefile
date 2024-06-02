@@ -19,11 +19,11 @@ SERVER_EXE = servidor
 all: $(CLIENT_EXE) $(SERVER_EXE)
 
 # Cliente
-$(CLIENT_EXE): $(BUILD_DIR)/$(CLIENT_SRC:.cpp=.o)
+$(CLIENT_EXE): $(BUILD_DIR)/$(CLIENT_SRC:.cpp=.o) | $(BIN_DIR)
 	$(CC) $(CFLAGS) $^ -o $(BIN_DIR)/$@
 
 # Servidor
-$(SERVER_EXE): $(BUILD_DIR)/$(SERVER_SRC:.cpp=.o)
+$(SERVER_EXE): $(BUILD_DIR)/$(SERVER_SRC:.cpp=.o) | $(BIN_DIR)
 	$(CC) $(CFLAGS) $^ -o $(BIN_DIR)/$@
 
 # Compilación de archivos fuente
